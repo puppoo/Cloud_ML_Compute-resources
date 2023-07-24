@@ -347,3 +347,17 @@ plt.title('Time Series Forecasting: Disk Utilization')
 plt.legend()
 plt.grid(True)
 plt.show()
+
+
+# Interpretation of the metrics for each resource utilization:
+## Memory Utilization:
+MAE: 4.53 On average, the forecasted memory utilization values differ from the actual memory utilization values by approximately 4.53 units. R-squared: 0.89 The model explains around 88.79% of the variance in memory utilization, which indicates a good fit of the model to the data.
+
+## CPU Utilization:
+MAE: 4.07 On average, the forecasted CPU utilization values differ from the actual CPU utilization values by approximately 4.07 units. R-squared: 0.44 The model explains around 44.23% of the variance in CPU utilization, which indicates a moderate fit of the model to the data. The model may benefit from improvement.
+
+## Disk Utilization:
+MAE: 13.64 On average, the forecasted disk utilization values differ from the actual disk utilization values by approximately 13.64 units. R-squared: 0.52 The model explains around 52.18% of the variance in disk utilization, which indicates a moderate fit of the model to the data. Like CPU utilization, the model may benefit from improvement.
+
+# Conclusion:
+The model seems to perform well for memory utilization with a high R-squared value, indicating a good fit to the data. However, there is room for improvement for CPU and disk utilization models, as indicated by lower R-squared values. Further model tuning or trying different models might help improve the accuracy of the forecasts for CPU and disk utilization.
