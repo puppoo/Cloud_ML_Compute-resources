@@ -102,16 +102,17 @@ def main():
     st.set_page_config(page_title='Cloud Resource Usage Optimization', page_icon=':chart_with_upwards_trend:',
                        layout='wide')
     custom_css = """
-         body {
-            background-color: #e1f5fe; /* Light blue background color */
-        }
-        .stApp {
-            background-color: #b3e5fc; /* Light blue background color */
-        }
-        .stButton>button {
-            background-color: #3498db;
-        }
-        """
+             body {
+                background-color: #f2f2f2; /* Light gray background color */
+            }
+            .stApp {
+                background-color: #d9d9d9; /* Light gray background color */
+            }
+            .stButton>button {
+                background-color: #3498db;
+            }
+    """
+
     st.markdown(f'<style>{custom_css}</style>', unsafe_allow_html=True)
 
     st.title('Cloud Resource Usage Optimization using Machine Learning')
