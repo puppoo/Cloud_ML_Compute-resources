@@ -95,6 +95,18 @@ def plot_bar_chart(x, y, x_label, y_label, title):
     st.plotly_chart(fig)
 
 
+# Function to gather user feedback
+def gather_user_feedback():
+    feedback_text = st.sidebar.text_area("Please provide your feedback:", "")
+    if st.sidebar.button("Submit Feedback"):
+        # Here you can save the feedback or take any other actions
+        st.sidebar.success("Thank you for your feedback!")
+
+# Function to save feedback to a text file
+def save_feedback(feedback):
+    with open("user_feedback.txt", "a") as file:
+        file.write(feedback + "\n")
+
 
 # Main Streamlit app
 def main():
@@ -120,6 +132,7 @@ def main():
     # User option for uploading a CSV file
     st.sidebar.title('Upload Custom CSV')
     uploaded_file = st.sidebar.file_uploader('Upload a CSV file', type=['csv'])
+
 
     if uploaded_file is not None:
         # Read the uploaded CSV file
@@ -280,7 +293,7 @@ def main():
             plot_bar_chart(average_disk_utilization.index, average_disk_utilization.values, 'Hostname',
                            'Average Disk Utilization', 'Average Disk Utilization by Hostname')
 
-
-# Run the main app
+        gather_user_feedback()
+        # Run the main app
 if __name__ == '__main__':
     main()
