@@ -124,11 +124,7 @@ def main():
                 background-color: #3498db;
             }
     """
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> 88e217f56c1a2cfc2e531e323d61970036b6b55e
     st.markdown(f'<style>{custom_css}</style>', unsafe_allow_html=True)
 
     st.title('Cloud Resource Usage Optimization using Machine Learning')
